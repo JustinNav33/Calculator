@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>
+      calculator
+    </title>
+    <style type = "text/css">
+      .table {
+        width: 60 px;
+        height: 60 px;
+        font-size: 30 px;
+        margin: 3 px;
+      }
+    </style>
+  </head>
+  <center>
+    <body bgcolor = "006400">
+      <form name = "calculator">
+        <table>
+          <tr>
+            <input name = "display" placeholder = "" style = "width: 250 px; height: 40 px; text-align: center; font-size: 30 px; margin: 3px"/>
+          </tr>
+          <tr>
+            <td>
+	      <input type = "button" value = "1" onclick = "document.calculator.display.value += '1'" class = "abc">
+            </td>
+            <td>
+	      <input type = "button" value = "2" onclick = "document.calculator.display.value += '2'" class = "abc">
+            </td>
+	    <td>
+	      <input type = "button" value = "3" onclick = "document.calculator.display.value += '3'" class = "abc">
+            </td>
+	    <td>
+	      <input type = "button" value = "+" onclick = "addFunction()" class = "abc">
+	    </td>
+	  </tr>
+          <tr>
+            <td>
+	      <input type = "button" value = "4" onclick = "document.calculator.display.value += '4'" class = "abc">
+            </td>
+            <td>
+	      <input type = "button" value = "5" onclick = "document.calculator.display.value += '5'" class = "abc">
+            </td>
+	    <td>
+	      <input type = "button" value = "6" onclick = "document.calculator.display.value += '6'" class = "abc">
+            </td>
+	    <td>
+	      <input type = "button" value = "-" onclick = "suntractFunction()" class = "abc">
+	    </td>
+	  </tr>
+          <tr>
+            <td>
+	      <input type = "button" value = "7" onclick = "document.calculator.display.value += '7'" class = "abc">
+            </td>
+            <td>
+	      <input type = "button" value = "8" onclick = "document.calculator.display.value += '8'" class = "abc">
+            </td>
+	    <td>
+	      <input type = "button" value = "9" onclick = "document.calculator.display.value += '9'" class = "abc">
+            </td>
+	    <td>
+	      <input type = "button" value = "*" onclick = "multiplyFunction()" class = "abc">
+	    </td>
+	  </tr>
+          <tr>
+            <td>
+	      <input type = "button" value = "C" onclick = "clearFunction()" class = "abc">
+            </td>
+            <td>
+	      <input type = "button" value = "0" onclick = "document.calculator.display.value += '0'" class = "abc">
+            </td>
+	    <td>
+	      <input type = "button" value = "=" onclick = "document.calculator.display.value = eval(document.calculator.display.value)" class = "abc">
+            </td>
+	    <td>
+	      <input type = "button" value = "/" onclick = "divideFunction()" class = "abc">
+	    </td>
+	  </tr>
+        </table>
+      </form>
+      <script>
+        function addFunction() {
+	  document.calculator.display.value += "+";
+	  document.calculator.display.textAlign = "center";
+	};
+        function subtractFunction() {
+	  document.calculator.display.value += "-";
+	  document.calculator.display.textAlign = "center";
+	};
+        function multiplyFunction() {
+	  document.calculator.display.value += "*";
+	  document.calculator.display.textAlign = "center";
+	};
+        function divideFunction() {
+	  document.calculator.display.value += "/";
+	  document.calculator.display.textAlign = "center";
+	};
+        function clearFunction() {
+	  document.calculator.display.value = "";
+	  document.calculator.display.textAlign = "center";
+	};
+      </script>
+    </body>
+  </center>
+</html>
